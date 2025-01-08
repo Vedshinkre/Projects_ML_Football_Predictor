@@ -48,8 +48,8 @@ By averaging the results of multiple decision trees, it reduces the risk of over
 
 ## Code Structure and Flow 
 ### 1. Data Scraping 
-o The script begins with importing required libraries such as requests and BeautifulSoup to fetch and parse data from the web. 
-o The raw HTML data is cleaned and structured into a pandas DataFrame.  
+ <li> The script begins with importing required libraries such as requests and BeautifulSoup to fetch and parse data from the web. <li>
+<li> The raw HTML data is cleaned and structured into a pandas DataFrame.<li> 
 
 ### 2. Data Cleaning and Preprocessing 
 o Irrelevant columns are dropped, and missing values are handled. 
