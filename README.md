@@ -22,11 +22,17 @@ Finally, I analyze the model's performance, identify areas for improvement, and 
 To follow this project, please install the following locally:
 
 JupyerLab
+
 Python 3.8+
+
 Python packages
+ 
 pandas
+
 requests
+
 BeautifulSoup
+
 scikit-learn
 
 
