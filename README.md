@@ -47,48 +47,33 @@ By averaging the results of multiple decision trees, it reduces the risk of over
 
 
 ## Code Structure and Flow 
-1. Data Scraping 
-o The script begins with importing required libraries such as requests and 
-BeautifulSoup to fetch and parse data from the web. 
-o The raw HTML data is cleaned and structured into a pandas DataFrame. 
-2. Data Cleaning and Preprocessing 
+### 1. Data Scraping 
+o The script begins with importing required libraries such as requests and BeautifulSoup to fetch and parse data from the web. 
+o The raw HTML data is cleaned and structured into a pandas DataFrame.  
+
+### 2. Data Cleaning and Preprocessing 
 o Irrelevant columns are dropped, and missing values are handled. 
-o The cleaned data is split into features (X) and target (y), where y 
-represents match outcomes (e.g., home win, away win, or draw). 
-3. Initial Predictor Selection 
-o Predictors such as venue, opposition, and the time of day a game is played 
-are crucial factors in determining the outcome of a match and are readily 
-available before the game begins. 
-o These served as the starting point for our predictor selection. However, 
-using these parameters directly is not effective for modeling purposes, so 
-we transformed them into encoded formats to enhance their utility. 
-o As a result, features like Venue_code, Opp_code, Hour, and Day_code 
-were created. These encoded features were selected for their strong 
-intuitive connection to match outcomes, effectively capturing contextual 
-information such as venue advantage and the difficulty posed by the 
-opponent. 
-4. Testing Initial Predictors 
-o The test data was evaluated as a single block to assess the baseline 
-performance of the model. 
-o Metrics such as accuracy and precision were computed to gauge the 
-effectiveness of the initial predictors. 
-5. Yearly Splits for Variation Analysis 
-o To analyze temporal variations, the test data was divided into distinct 
-years. 
-o This helped identify how the model's performance fluctuated across 
-different seasons and highlighted potential inconsistencies in prediction 
-accuracy. 
-6. Introducing Rolling Scores 
-o Rolling averages were introduced for features like goals scored (GF), 
-goals conceded (GA), shots (Sh), and shots on target (SoT). 
-o These rolling features capture short-term team performance trends, 
-offering a dynamic perspective that complements static predictors. For 
-example, a high rolling average for SoT indicates a team’s current 
-offensive strength. 
-o Rolling averages significantly improved predictions by incorporating 
-recent performance dynamics, which are often crucial in sports analytics. 
-7. Current Model Status 
-o While the inclusion of rolling features enhanced the model, it remains a 
-work in progress. 
-o The final model is yet to be optimized fully, and further refinements are 
-planned to improve accuracy and precision.
+o The cleaned data is split into features (X) and target (y), where y represents match outcomes (e.g., home win, away win, or draw). 
+
+### 3. Initial Predictor Selection 
+o Predictors such as venue, opposition, and the time of day a game is played are crucial factors in determining the outcome of a match and are readily available before the game begins. 
+o These served as the starting point for our predictor selection. However, using these parameters directly is not effective for modeling purposes, so we transformed them into encoded formats to enhance their utility. 
+o As a result, features like Venue_code, Opp_code, Hour, and Day_code were created. These encoded features were selected for their strong intuitive connection to match outcomes, effectively capturing contextual information such as venue advantage and the difficulty posed by the 
+opponent.
+
+### 4. Testing Initial Predictors 
+o The test data was evaluated as a single block to assess the baseline performance of the model. 
+o Metrics such as accuracy and precision were computed to gauge the effectiveness of the initial predictors.
+
+### 5. Yearly Splits for Variation Analysis 
+o To analyze temporal variations, the test data was divided into distinct years. 
+o This helped identify how the model's performance fluctuated across different seasons and highlighted potential inconsistencies in prediction accuracy. 
+
+### 6. Introducing Rolling Scores 
+o Rolling averages were introduced for features like goals scored (GF), goals conceded (GA), shots (Sh), and shots on target (SoT). 
+o These rolling features capture short-term team performance trends, offering a dynamic perspective that complements static predictors. For example, a high rolling average for SoT indicates a team’s current offensive strength. 
+o Rolling averages significantly improved predictions by incorporating recent performance dynamics, which are often crucial in sports analytics. 
+
+### 7. Current Model Status 
+o While the inclusion of rolling features enhanced the model, it remains a work in progress. 
+o The final model is yet to be optimized fully, and further refinements are planned to improve accuracy and precision.
