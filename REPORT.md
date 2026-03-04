@@ -126,19 +126,11 @@ Standard form metrics (like "Last 5 Games") fail to capture long-term pedigree. 
 
 The expected win probability is calculated using the logistic curve:
 
-\[
-
-W_e = \frac{1}{1 + 10^{(R_{opp} - R_{home})/400}}
-
-\]
+`We = 1 / (1 + 10^((R_opp - R_home)/400))`
 
 Elo ratings are updated using a multiplier:
 
-\[
-
-K = 20
-
-\]
+`K = 20`
 
 This ensures:
 
