@@ -1,0 +1,20 @@
+========================================
+HYPERPARAMETER TUNING LOG
+Date: 2023-10-27
+Model: Random Forest (Level 6 - Ultimate)
+Optimization Method: RandomizedSearchCV (50 Iterations)
+Validation: 5-Fold Time Series Split
+========================================
+
+BEST SCORE: 66.4% Accuracy
+
+BEST PARAMETERS:
+- n_estimators: 300
+- min_samples_split: 20
+- min_samples_leaf: 1
+- max_features: 'log2'
+- max_depth: 5
+
+NOTES:
+Beat the default settings (66.2%) by +0.2%.
+High precision maintained.
